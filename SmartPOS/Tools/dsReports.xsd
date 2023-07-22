@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReports" targetNamespace="http://tempuri.org/dsReports.xsd" xmlns:mstns="http://tempuri.org/dsReports.xsd" xmlns="http://tempuri.org/dsReports.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="connection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connection (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartPOS.Properties.Settings.GlobalReference.Default.connection" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwSaleChecksTableAdapter" GeneratorDataComponentClassName="vwSaleChecksTableAdapter" Name="vwSaleChecks" UserDataComponentName="vwSaleChecksTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connection (Settings)" DbObjectName="SmartPOS.dbo.vwSaleChecks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, checkDate, totalCheck, status, CheckId, PaymentId, PayVal, UserName, FullName, Des, userId
+FROM            vwSaleChecks</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="checkDate" DataSetColumn="checkDate" />
+              <Mapping SourceColumn="totalCheck" DataSetColumn="totalCheck" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="CheckId" DataSetColumn="CheckId" />
+              <Mapping SourceColumn="PaymentId" DataSetColumn="PaymentId" />
+              <Mapping SourceColumn="PayVal" DataSetColumn="PayVal" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
+              <Mapping SourceColumn="Des" DataSetColumn="Des" />
+              <Mapping SourceColumn="userId" DataSetColumn="userId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwSaleDetailsTableAdapter" GeneratorDataComponentClassName="vwSaleDetailsTableAdapter" Name="vwSaleDetails" UserDataComponentName="vwSaleDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connection (Settings)" DbObjectName="SmartPOS.dbo.vwSaleDetails" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, checkDate, totalCheck, status, ItemId, QTY, price, totalPrice, DES, CategoryId, IT_DES
+FROM            vwSaleDetails</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="checkDate" DataSetColumn="checkDate" />
+              <Mapping SourceColumn="totalCheck" DataSetColumn="totalCheck" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="ItemId" DataSetColumn="ItemId" />
+              <Mapping SourceColumn="QTY" DataSetColumn="QTY" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="totalPrice" DataSetColumn="totalPrice" />
+              <Mapping SourceColumn="DES" DataSetColumn="DES" />
+              <Mapping SourceColumn="CategoryId" DataSetColumn="CategoryId" />
+              <Mapping SourceColumn="IT_DES" DataSetColumn="IT_DES" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReports" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReports" msprop:Generator_UserDSName="dsReports">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwSaleChecks" msprop:Generator_TableClassName="vwSaleChecksDataTable" msprop:Generator_TableVarName="tablevwSaleChecks" msprop:Generator_TablePropName="vwSaleChecks" msprop:Generator_RowDeletingName="vwSaleChecksRowDeleting" msprop:Generator_RowChangingName="vwSaleChecksRowChanging" msprop:Generator_RowEvHandlerName="vwSaleChecksRowChangeEventHandler" msprop:Generator_RowDeletedName="vwSaleChecksRowDeleted" msprop:Generator_UserTableName="vwSaleChecks" msprop:Generator_RowChangedName="vwSaleChecksRowChanged" msprop:Generator_RowEvArgName="vwSaleChecksRowChangeEvent" msprop:Generator_RowClassName="vwSaleChecksRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="checkDate" msprop:Generator_ColumnVarNameInTable="columncheckDate" msprop:Generator_ColumnPropNameInRow="checkDate" msprop:Generator_ColumnPropNameInTable="checkDateColumn" msprop:Generator_UserColumnName="checkDate" type="xs:dateTime" />
+              <xs:element name="totalCheck" msprop:Generator_ColumnVarNameInTable="columntotalCheck" msprop:Generator_ColumnPropNameInRow="totalCheck" msprop:Generator_ColumnPropNameInTable="totalCheckColumn" msprop:Generator_UserColumnName="totalCheck" type="xs:decimal" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CheckId" msprop:Generator_ColumnVarNameInTable="columnCheckId" msprop:Generator_ColumnPropNameInRow="CheckId" msprop:Generator_ColumnPropNameInTable="CheckIdColumn" msprop:Generator_UserColumnName="CheckId" type="xs:int" />
+              <xs:element name="PaymentId" msprop:Generator_ColumnVarNameInTable="columnPaymentId" msprop:Generator_ColumnPropNameInRow="PaymentId" msprop:Generator_ColumnPropNameInTable="PaymentIdColumn" msprop:Generator_UserColumnName="PaymentId" type="xs:int" />
+              <xs:element name="PayVal" msprop:Generator_ColumnVarNameInTable="columnPayVal" msprop:Generator_ColumnPropNameInRow="PayVal" msprop:Generator_ColumnPropNameInTable="PayValColumn" msprop:Generator_UserColumnName="PayVal" type="xs:decimal" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Des" msprop:Generator_ColumnVarNameInTable="columnDes" msprop:Generator_ColumnPropNameInRow="Des" msprop:Generator_ColumnPropNameInTable="DesColumn" msprop:Generator_UserColumnName="Des">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userId" msprop:Generator_ColumnVarNameInTable="columnuserId" msprop:Generator_ColumnPropNameInRow="userId" msprop:Generator_ColumnPropNameInTable="userIdColumn" msprop:Generator_UserColumnName="userId" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwSaleDetails" msprop:Generator_TableClassName="vwSaleDetailsDataTable" msprop:Generator_TableVarName="tablevwSaleDetails" msprop:Generator_RowChangedName="vwSaleDetailsRowChanged" msprop:Generator_TablePropName="vwSaleDetails" msprop:Generator_RowDeletingName="vwSaleDetailsRowDeleting" msprop:Generator_RowChangingName="vwSaleDetailsRowChanging" msprop:Generator_RowEvHandlerName="vwSaleDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="vwSaleDetailsRowDeleted" msprop:Generator_RowClassName="vwSaleDetailsRow" msprop:Generator_UserTableName="vwSaleDetails" msprop:Generator_RowEvArgName="vwSaleDetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="checkDate" msprop:Generator_ColumnVarNameInTable="columncheckDate" msprop:Generator_ColumnPropNameInRow="checkDate" msprop:Generator_ColumnPropNameInTable="checkDateColumn" msprop:Generator_UserColumnName="checkDate" type="xs:dateTime" />
+              <xs:element name="totalCheck" msprop:Generator_ColumnVarNameInTable="columntotalCheck" msprop:Generator_ColumnPropNameInRow="totalCheck" msprop:Generator_ColumnPropNameInTable="totalCheckColumn" msprop:Generator_UserColumnName="totalCheck" type="xs:decimal" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:int" />
+              <xs:element name="QTY" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:decimal" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" />
+              <xs:element name="totalPrice" msprop:Generator_ColumnVarNameInTable="columntotalPrice" msprop:Generator_ColumnPropNameInRow="totalPrice" msprop:Generator_ColumnPropNameInTable="totalPriceColumn" msprop:Generator_UserColumnName="totalPrice" type="xs:decimal" />
+              <xs:element name="DES" msprop:Generator_ColumnVarNameInTable="columnDES" msprop:Generator_ColumnPropNameInRow="DES" msprop:Generator_ColumnPropNameInTable="DESColumn" msprop:Generator_UserColumnName="DES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CategoryId" msprop:Generator_ColumnVarNameInTable="columnCategoryId" msprop:Generator_ColumnPropNameInRow="CategoryId" msprop:Generator_ColumnPropNameInTable="CategoryIdColumn" msprop:Generator_UserColumnName="CategoryId" type="xs:int" />
+              <xs:element name="IT_DES" msprop:Generator_ColumnVarNameInTable="columnIT_DES" msprop:Generator_ColumnPropNameInRow="IT_DES" msprop:Generator_ColumnPropNameInTable="IT_DESColumn" msprop:Generator_UserColumnName="IT_DES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwSaleChecks" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="vwSaleDetailsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwSaleDetails" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
