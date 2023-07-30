@@ -1,7 +1,7 @@
 ﻿
 namespace SmartPOS.Forms
 {
-    partial class FormUsers
+    partial class FormTaxes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,9 @@ namespace SmartPOS.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTaxes));
+            this.txtDEs = new System.Windows.Forms.TextBox();
+            this.lblDEs = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnSelect = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -42,20 +44,27 @@ namespace SmartPOS.Forms
             this.btnLast = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnExit = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtJobDes = new System.Windows.Forms.TextBox();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.txtamount = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txtDEs
+            // 
+            this.txtDEs.Location = new System.Drawing.Point(127, 100);
+            this.txtDEs.Name = "txtDEs";
+            this.txtDEs.Size = new System.Drawing.Size(216, 20);
+            this.txtDEs.TabIndex = 6;
+            // 
+            // lblDEs
+            // 
+            this.lblDEs.AutoSize = true;
+            this.lblDEs.Location = new System.Drawing.Point(71, 103);
+            this.lblDEs.Name = "lblDEs";
+            this.lblDEs.Size = new System.Drawing.Size(36, 13);
+            this.lblDEs.TabIndex = 5;
+            this.lblDEs.Text = "Taxes";
             // 
             // toolStrip1
             // 
@@ -74,8 +83,8 @@ namespace SmartPOS.Forms
             this.btnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(644, 68);
-            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Size = new System.Drawing.Size(454, 68);
+            this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnSelect
@@ -174,128 +183,50 @@ namespace SmartPOS.Forms
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label1
+            // lblAmount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 171);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Job Des";
-            // 
-            // txtJobDes
-            // 
-            this.txtJobDes.Location = new System.Drawing.Point(385, 168);
-            this.txtJobDes.Name = "txtJobDes";
-            this.txtJobDes.Size = new System.Drawing.Size(195, 20);
-            this.txtJobDes.TabIndex = 7;
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Location = new System.Drawing.Point(71, 129);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(44, 13);
+            this.lblAmount.TabIndex = 7;
+            this.lblAmount.Text = "Amount";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(316, 135);
+            this.label2.Location = new System.Drawing.Point(249, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Phone";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "%";
             // 
-            // txtPhone
+            // txtamount
             // 
-            this.txtPhone.Location = new System.Drawing.Point(385, 132);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(195, 20);
-            this.txtPhone.TabIndex = 6;
+            this.txtamount.Location = new System.Drawing.Point(127, 126);
+            this.txtamount.Name = "txtamount";
+            this.txtamount.Size = new System.Drawing.Size(116, 20);
+            this.txtamount.TabIndex = 10;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(95, 201);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(195, 20);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 171);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "FullName";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 135);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(95, 132);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(195, 20);
-            this.txtPassword.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "User Name";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(95, 100);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(195, 20);
-            this.txtUserName.TabIndex = 2;
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.Location = new System.Drawing.Point(95, 168);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(195, 20);
-            this.txtFullName.TabIndex = 4;
-            // 
-            // FormUsers
+            // FormTaxes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 268);
-            this.Controls.Add(this.txtFullName);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtJobDes);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(454, 181);
+            this.Controls.Add(this.txtamount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAmount);
+            this.Controls.Add(this.txtDEs);
+            this.Controls.Add(this.lblDEs);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "FormUsers";
+            this.MinimizeBox = false;
+            this.Name = "FormTaxes";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormUsers";
-            this.Load += new System.EventHandler(this.FormUsers_Load);
+            this.Text = "FormTaxes";
+            this.Load += new System.EventHandler(this.FormTaxes_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -305,6 +236,8 @@ namespace SmartPOS.Forms
 
         #endregion
 
+        private System.Windows.Forms.TextBox txtDEs;
+        private System.Windows.Forms.Label lblDEs;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnSelect;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -317,17 +250,8 @@ namespace SmartPOS.Forms
         private System.Windows.Forms.ToolStripButton btnLast;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnExit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtJobDes;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.TextBox txtamount;
     }
 }

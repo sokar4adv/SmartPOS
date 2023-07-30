@@ -42,13 +42,13 @@ namespace SmartPOS
             this.lblVer = new System.Windows.Forms.Label();
             this.lblsmartPOS = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.lblUserFullName = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlMainForm = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -216,6 +216,11 @@ namespace SmartPOS
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // pnlTitle
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.Gray;
@@ -228,8 +233,7 @@ namespace SmartPOS
             this.pnlTitle.Location = new System.Drawing.Point(210, 0);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(574, 125);
-            this.pnlTitle.TabIndex = 1;
-            this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
+            this.pnlTitle.TabIndex = 4;
             // 
             // lblCurrentUser
             // 
@@ -265,7 +269,7 @@ namespace SmartPOS
             this.btnExit.Size = new System.Drawing.Size(66, 57);
             this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // lblTime
             // 
@@ -290,19 +294,13 @@ namespace SmartPOS
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Point Of Sale";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // pnlMainForm
             // 
             this.pnlMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainForm.Location = new System.Drawing.Point(210, 125);
             this.pnlMainForm.Name = "pnlMainForm";
             this.pnlMainForm.Size = new System.Drawing.Size(574, 436);
-            this.pnlMainForm.TabIndex = 2;
-            this.pnlMainForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainForm_Paint);
+            this.pnlMainForm.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -335,19 +333,19 @@ namespace SmartPOS
         private System.Windows.Forms.Button btnSetup;
         private System.Windows.Forms.Button btnPOS;
         private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Panel pnlTitle;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblsmartPOS;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblVer;
-        private System.Windows.Forms.Panel pnlMainForm;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label lblUserFullName;
+        private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label lblCurrentUser;
+        private System.Windows.Forms.Label lblUserFullName;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel pnlMainForm;
     }
 }
 

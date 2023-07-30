@@ -36,6 +36,8 @@ namespace SmartPOS.Forms
             this.btnUser = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPermissions = new System.Windows.Forms.Button();
+            this.btnTaxes = new System.Windows.Forms.Button();
+            this.btnTables = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -122,12 +124,42 @@ namespace SmartPOS.Forms
             this.btnPermissions.UseVisualStyleBackColor = true;
             this.btnPermissions.Click += new System.EventHandler(this.btnPermissions_Click);
             // 
+            // btnTaxes
+            // 
+            this.btnTaxes.AccessibleName = "Payments";
+            this.btnTaxes.Image = ((System.Drawing.Image)(resources.GetObject("btnTaxes.Image")));
+            this.btnTaxes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTaxes.Location = new System.Drawing.Point(128, 204);
+            this.btnTaxes.Name = "btnTaxes";
+            this.btnTaxes.Size = new System.Drawing.Size(110, 90);
+            this.btnTaxes.TabIndex = 7;
+            this.btnTaxes.Text = "Taxes";
+            this.btnTaxes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTaxes.UseVisualStyleBackColor = true;
+            this.btnTaxes.Click += new System.EventHandler(this.btnTaxes_Click);
+            // 
+            // btnTables
+            // 
+            this.btnTables.AccessibleName = "Payments";
+            this.btnTables.Image = ((System.Drawing.Image)(resources.GetObject("btnTables.Image")));
+            this.btnTables.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTables.Location = new System.Drawing.Point(12, 300);
+            this.btnTables.Name = "btnTables";
+            this.btnTables.Size = new System.Drawing.Size(110, 90);
+            this.btnTables.TabIndex = 8;
+            this.btnTables.Text = "Tables";
+            this.btnTables.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTables.UseVisualStyleBackColor = true;
+            this.btnTables.Click += new System.EventHandler(this.btnTables_Click);
+            // 
             // MainSetup
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 397);
+            this.Controls.Add(this.btnTables);
+            this.Controls.Add(this.btnTaxes);
             this.Controls.Add(this.btnPermissions);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUser);
@@ -149,5 +181,7 @@ namespace SmartPOS.Forms
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPermissions;
+        private System.Windows.Forms.Button btnTaxes;
+        private System.Windows.Forms.Button btnTables;
     }
 }

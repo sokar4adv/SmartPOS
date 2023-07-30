@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -92,6 +92,7 @@ namespace SmartPOS.Classes
             dsReports reports = new dsReports();
             try
             {
+                reports.EnforceConstraints = false;
                 adapter.Fill(reports.Tables["vwSaleDetails"]);
             }
             catch (Exception ex)
@@ -100,6 +101,33 @@ namespace SmartPOS.Classes
             rptForm.mainReport.LocalReport.ReportEmbeddedResource = "SmartPOS.Reports.saleDetailsReport.rdlc";
             rptForm.mainReport.LocalReport.DataSources.Clear();
             rptForm.mainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", reports.Tables["vwSaleDetails"]));
+            ReportParameter[] reportParameters = new ReportParameter[4];
+            reportParameters[0] = new ReportParameter("From", _from.ToString("yyyy-MM-dd"));
+            reportParameters[1] = new ReportParameter("To", _to.ToString("yyyy-MM-dd"));
+            reportParameters[2] = new ReportParameter("RestName", declerations.systemOptions["RestName"].ToString());
+            byte[] imageByte = (byte[])declerations.systemOptions["logo"];
+            reportParameters[3] = new ReportParameter("img", Convert.ToBase64String(imageByte));
+            rptForm.mainReport.LocalReport.SetParameters(reportParameters);
+            rptForm.ShowDialog();
+        }
+
+        public void runSaleByItemReport(DateTime _from, DateTime _to, string CatId)
+        {
+            string viewTxt = "Select * From vwSaleByItem Where checkDate between '" + _from.ToString("yyyy-MM-dd") + "' AND '" + _to.ToString("yyyy-MM-dd") + "' ";
+            viewTxt += " AND id = '" + CatId + "' ";
+            adapter = new SqlDataAdapter(viewTxt, adoClass.sqlCn);
+            dsReports reports = new dsReports();
+            try
+            {
+                reports.EnforceConstraints = false;
+                adapter.Fill(reports.Tables["vwSaleByItem"]);
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+            FormReports rptForm = new FormReports();
+            rptForm.mainReport.LocalReport.ReportEmbeddedResource = "SmartPOS.Reports.saleByItemReport.rdlc";
+            rptForm.mainReport.LocalReport.DataSources.Clear();
+            rptForm.mainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", reports.Tables["vwSaleByItem"]));
             ReportParameter[] reportParameters = new ReportParameter[4];
             reportParameters[0] = new ReportParameter("From", _from.ToString("yyyy-MM-dd"));
             reportParameters[1] = new ReportParameter("To", _to.ToString("yyyy-MM-dd"));

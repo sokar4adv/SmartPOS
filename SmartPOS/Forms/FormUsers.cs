@@ -185,10 +185,5 @@ namespace SmartPOS.Forms
                 loadData(int.Parse(select.result));
             }
         }
-
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

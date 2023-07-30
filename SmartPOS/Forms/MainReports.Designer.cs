@@ -33,6 +33,7 @@ namespace SmartPOS.Forms
             this.btnSaleReport = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSaleDetailsReport = new System.Windows.Forms.Button();
+            this.btnSaleByItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSaleReport
@@ -77,11 +78,26 @@ namespace SmartPOS.Forms
             this.btnSaleDetailsReport.UseVisualStyleBackColor = true;
             this.btnSaleDetailsReport.Click += new System.EventHandler(this.btnSaleDetailsReport_Click);
             // 
+            // btnSaleByItem
+            // 
+            this.btnSaleByItem.AccessibleName = "SaleReport";
+            this.btnSaleByItem.Image = ((System.Drawing.Image)(resources.GetObject("btnSaleByItem.Image")));
+            this.btnSaleByItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSaleByItem.Location = new System.Drawing.Point(244, 12);
+            this.btnSaleByItem.Name = "btnSaleByItem";
+            this.btnSaleByItem.Size = new System.Drawing.Size(110, 90);
+            this.btnSaleByItem.TabIndex = 4;
+            this.btnSaleByItem.Text = "Sale By Item";
+            this.btnSaleByItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSaleByItem.UseVisualStyleBackColor = true;
+            this.btnSaleByItem.Click += new System.EventHandler(this.btnSaleByItem_Click);
+            // 
             // MainReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 397);
+            this.Controls.Add(this.btnSaleByItem);
             this.Controls.Add(this.btnSaleDetailsReport);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSaleReport);
@@ -97,5 +113,6 @@ namespace SmartPOS.Forms
         private System.Windows.Forms.Button btnSaleReport;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSaleDetailsReport;
+        private System.Windows.Forms.Button btnSaleByItem;
     }
 }

@@ -20,7 +20,5 @@ namespace SmartPOS.Classes
         public string mainScreen { get; set; }
         public string permission { get; set; }
         public bool theCase { get; set;  }
-
-
     }
 }

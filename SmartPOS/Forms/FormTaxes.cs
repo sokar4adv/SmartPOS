@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace SmartPOS.Forms
 {
-    public partial class FormItems : Form
+    public partial class FormTaxes : Form
     {
-        public FormItems()
+        public FormTaxes()
         {
             InitializeComponent();
         }
@@ -24,12 +24,9 @@ namespace SmartPOS.Forms
         private DataRow row;
         private int index;
 
-
-        private void FormItems_Load(object sender, EventArgs e)
+        private void FormTaxes_Load(object sender, EventArgs e)
         {
-            Helper.fillComboBox(comboBox1, "SELECT Id, DES FROM Categorise");
-            Helper.fillComboBox(cmbxTax, "SELECT Id, DES FROM Taxes");
-            adapter = new SqlDataAdapter("Select * From Items", adoClass.sqlCn);
+            adapter = new SqlDataAdapter("Select * From Taxes", adoClass.sqlCn);
             dataTable = new DataTable();
             adapter.Fill(dataTable);
             index = 0;
@@ -42,18 +39,7 @@ namespace SmartPOS.Forms
             if (dataTable.Rows.Count > 0 && _index >= 0 && _index <= dataTable.Rows.Count - 1)
             {
                 txtDEs.Text = dataTable.Rows[_index]["DES"].ToString();
-                comboBox1.Text = Helper.getComboItemVal(comboBox1, dataTable.Rows[_index]["CategoryId"].ToString());
-                cmbxTax.Text = Helper.getComboItemVal(cmbxTax, dataTable.Rows[_index]["TaxId"].ToString());
-                txtPrice.Text = dataTable.Rows[_index]["price"].ToString();
-                txtNotes.Text = dataTable.Rows[_index]["notes"].ToString();
-                if (dataTable.Rows[_index]["itemImg"] != DBNull.Value)
-                {
-                    pictureBox1.BackgroundImage = Helper.ByteToImage(dataTable.Rows[_index]["itemImg"]);
-                }
-                else
-                {
-                    pictureBox1.BackgroundImage = null;
-                }
+                txtamount.Text = dataTable.Rows[_index]["amount"].ToString();
                 row = dataTable.Rows[_index];
             }
         }
@@ -73,18 +59,7 @@ namespace SmartPOS.Forms
             {
                 row = dataRows[0];
                 txtDEs.Text = row["DES"].ToString();
-                comboBox1.Text = Helper.getComboItemVal(comboBox1, row["CategoryId"].ToString());
-                cmbxTax.Text = Helper.getComboItemVal(cmbxTax, row["TaxId"].ToString());
-                txtPrice.Text = row["price"].ToString();
-                txtNotes.Text = row["notes"].ToString();
-                if (row["itemImg"] != DBNull.Value)
-                {
-                    pictureBox1.BackgroundImage = Helper.ByteToImage(row["itemImg"]);
-                }
-                else
-                {
-                    pictureBox1.BackgroundImage = null;
-                }
+                txtamount.Text = row["amount"].ToString();
             }
         }
 
@@ -97,12 +72,7 @@ namespace SmartPOS.Forms
                 {
                     ctr.Text = string.Empty;
                 }
-                if (ctr is ComboBox)
-                {
-                    ctr.Text = "";
-                }
             }
-            pictureBox1.BackgroundImage = null;
             txtDEs.Focus();
         }
 
@@ -110,19 +80,14 @@ namespace SmartPOS.Forms
         {
             if (txtDEs.Text == string.Empty)
             {
-                MessageBox.Show("Enter The DES");
+                MessageBox.Show("Enter the DES");
                 txtDEs.Focus();
                 return;
             }
-            if (comboBox1.Text == string.Empty)
+            if (txtamount.Text == string.Empty)
             {
-                MessageBox.Show("Select The Catigory");
-                return;
-            }
-            if (double.Parse(txtPrice.Text) <= 0)
-            {
-                MessageBox.Show("Enter The Price");
-                txtDEs.Focus();
+                MessageBox.Show("Enter the amount");
+                txtamount.Focus();
                 return;
             }
             saveData();
@@ -157,17 +122,12 @@ namespace SmartPOS.Forms
         private void dataFillRow()
         {
             row["DES"] = txtDEs.Text;
-            row["CategoryId"] = ((comboItem) comboBox1.SelectedItem).Id;
-            if (cmbxTax.Text != "")
-            {
-                row["TaxId"] = ((comboItem)cmbxTax.SelectedItem).Id;
-            }
-            row["price"] = txtPrice.Text;
-            row["notes"] = txtNotes.Text;
-            if (pictureBox1.BackgroundImage != null)
-            {
-                row["itemImg"] = Helper.ImageToByte(pictureBox1.BackgroundImage);
-            }
+            row["amount"] = txtamount.Text;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
@@ -200,28 +160,12 @@ namespace SmartPOS.Forms
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            FormSelect select = new FormSelect("Select id, DES From Items");
+            FormSelect select = new FormSelect("Select id, DES, amount From Taxes");
             select.des = "DES";
             if (select.ShowDialog() == DialogResult.OK)
             {
                 loadData(int.Parse(select.result));
             }
-        }
-
-        private void btnSelectPic_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "Images |*.png";
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                txtPic.Text = fileDialog.FileName;
-                pictureBox1.BackgroundImage = new Bitmap(txtPic.Text);
-            }
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

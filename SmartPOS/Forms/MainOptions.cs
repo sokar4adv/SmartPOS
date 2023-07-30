@@ -113,7 +113,6 @@ namespace SmartPOS.Forms
             }
         }
 
-
         private void dataFillRow()
         {
             Row["RestName"] = txtRestName.Text;
@@ -129,47 +128,6 @@ namespace SmartPOS.Forms
             }
             if (comboBox1.Text != "")
                 Row["defultCategoryId"] = ((comboItem)comboBox1.SelectedItem).Id;
-
-        }
-
-        private void txtRestName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRestAddress1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRestAddress2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTelephone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPrinterName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtReceiptline1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtReceiptline2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtlogo_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSelectPic_Click(object sender, EventArgs e)
@@ -181,11 +139,6 @@ namespace SmartPOS.Forms
                 txtPic.Text = fileDialog.FileName;
                 pictureBox1.BackgroundImage = new Bitmap(txtPic.Text);
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

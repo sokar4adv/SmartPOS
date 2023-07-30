@@ -47,5 +47,15 @@ namespace SmartPOS.Forms
                 checks.runSaleDetailsReport(filter._from, filter._to);
             }
         }
+
+        private void btnSaleByItem_Click(object sender, EventArgs e)
+        {
+            FilterForm filter = new FilterForm();
+            if (filter.ShowDialog() == DialogResult.OK)
+            {
+                printChecks checks = new printChecks();
+                checks.runSaleByItemReport(filter._from, filter._to, filter._CatId);
+            }
+        }
     }
 }

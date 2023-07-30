@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using SmartPOS.Forms;
 using SmartPOS.Classes;
+using System.Runtime.InteropServices;
 
 namespace SmartPOS
 {
@@ -18,7 +19,6 @@ namespace SmartPOS
 
         private Button currentButton;
         private Form activeForm;
-
 
         public MainForm()
         {
@@ -29,11 +29,16 @@ namespace SmartPOS
         {
             lblTime.Text = DateTime.Now.ToString();
             this.Text = string.Empty;
-            this.ControlBox = true;
+            this.ControlBox = false;
             this.lblUserFullName.Text = declerations.userFullName;
             Helper.loadPermissions(this.Controls, "Main");
         }
 
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void OpenChiledForm(Form cForm, object btnSender)
         {
@@ -51,8 +56,6 @@ namespace SmartPOS
             cForm.BringToFront();
             cForm.Show();
         }
-
-
         private Color SelectTheme()
         {
             if (currentButton.Text == "Point Of Sale")
@@ -75,8 +78,7 @@ namespace SmartPOS
             {
                 return Color.Gray;
             }
-        }
-        
+        }        
 
         private void ActiveButton(object sender)
         { 
@@ -138,20 +140,20 @@ namespace SmartPOS
             Process.Start("https://www.facebook.com/mostafa.sokar.14");
         }
 
-        private void pnlMainForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        private void pnlTitle_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pnlTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

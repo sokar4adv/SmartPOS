@@ -52,8 +52,10 @@ namespace SmartPOS.Forms
         {
             adapter = new SqlDataAdapter(selectTxt, adoClass.sqlCn);
             dataTable = new DataTable();
-            try {
+            try 
+            {
                 adapter.Fill(dataTable);
+                loadselect();
             }
             catch(Exception ex)
             { MessageBox.Show(ex.Message); }
@@ -61,7 +63,7 @@ namespace SmartPOS.Forms
 
         private void dgvItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if  (dgvItems.Rows.Count >0)
+            if  (dgvItems.Rows.Count > 0)
             {
                 result = dgvItems[ColId.Index, dgvItems.CurrentRow.Index].Value.ToString();
                 this.DialogResult = DialogResult.OK;

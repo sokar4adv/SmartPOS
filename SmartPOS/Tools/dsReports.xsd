@@ -61,6 +61,31 @@ FROM            vwSaleDetails</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwSaleByItemTableAdapter" GeneratorDataComponentClassName="vwSaleByItemTableAdapter" Name="vwSaleByItem" UserDataComponentName="vwSaleByItemTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connection (Settings)" DbObjectName="SmartPOS.dbo.vwSaleByItem" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, DES, IT_DES, CheckId, ItemId, QTY, price, totalPrice, checkDate
+FROM            vwSaleByItem</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="DES" DataSetColumn="DES" />
+              <Mapping SourceColumn="IT_DES" DataSetColumn="IT_DES" />
+              <Mapping SourceColumn="CheckId" DataSetColumn="CheckId" />
+              <Mapping SourceColumn="ItemId" DataSetColumn="ItemId" />
+              <Mapping SourceColumn="QTY" DataSetColumn="QTY" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="totalPrice" DataSetColumn="totalPrice" />
+              <Mapping SourceColumn="checkDate" DataSetColumn="checkDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -142,6 +167,33 @@ FROM            vwSaleDetails</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwSaleByItem" msprop:Generator_TableClassName="vwSaleByItemDataTable" msprop:Generator_TableVarName="tablevwSaleByItem" msprop:Generator_TablePropName="vwSaleByItem" msprop:Generator_RowDeletingName="vwSaleByItemRowDeleting" msprop:Generator_RowChangingName="vwSaleByItemRowChanging" msprop:Generator_RowEvHandlerName="vwSaleByItemRowChangeEventHandler" msprop:Generator_RowDeletedName="vwSaleByItemRowDeleted" msprop:Generator_UserTableName="vwSaleByItem" msprop:Generator_RowChangedName="vwSaleByItemRowChanged" msprop:Generator_RowEvArgName="vwSaleByItemRowChangeEvent" msprop:Generator_RowClassName="vwSaleByItemRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="DES" msprop:Generator_ColumnVarNameInTable="columnDES" msprop:Generator_ColumnPropNameInRow="DES" msprop:Generator_ColumnPropNameInTable="DESColumn" msprop:Generator_UserColumnName="DES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IT_DES" msprop:Generator_ColumnVarNameInTable="columnIT_DES" msprop:Generator_ColumnPropNameInRow="IT_DES" msprop:Generator_ColumnPropNameInTable="IT_DESColumn" msprop:Generator_UserColumnName="IT_DES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CheckId" msprop:Generator_ColumnVarNameInTable="columnCheckId" msprop:Generator_ColumnPropNameInRow="CheckId" msprop:Generator_ColumnPropNameInTable="CheckIdColumn" msprop:Generator_UserColumnName="CheckId" type="xs:int" />
+              <xs:element name="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:int" />
+              <xs:element name="QTY" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:decimal" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" />
+              <xs:element name="totalPrice" msprop:Generator_ColumnVarNameInTable="columntotalPrice" msprop:Generator_ColumnPropNameInRow="totalPrice" msprop:Generator_ColumnPropNameInTable="totalPriceColumn" msprop:Generator_UserColumnName="totalPrice" type="xs:decimal" />
+              <xs:element name="checkDate" msprop:Generator_ColumnVarNameInTable="columncheckDate" msprop:Generator_ColumnPropNameInRow="checkDate" msprop:Generator_ColumnPropNameInTable="checkDateColumn" msprop:Generator_UserColumnName="checkDate" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

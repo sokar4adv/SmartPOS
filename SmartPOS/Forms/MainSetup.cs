@@ -57,5 +57,17 @@ namespace SmartPOS.Forms
         {
             Helper.loadPermissions(this.Controls, "Setup");
         }
+
+        private void btnTaxes_Click(object sender, EventArgs e)
+        {
+            FormTaxes form = new FormTaxes();
+            form.ShowDialog();
+        }
+
+        private void btnTables_Click(object sender, EventArgs e)
+        {
+            FormTables form = new FormTables();
+            form.ShowDialog();
+        }
     }
 }

@@ -64,7 +64,7 @@ namespace SmartPOS.Forms
             this.btnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(534, 68);
+            this.toolStrip1.Size = new System.Drawing.Size(454, 68);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -167,15 +167,15 @@ namespace SmartPOS.Forms
             // lblDEs
             // 
             this.lblDEs.AutoSize = true;
-            this.lblDEs.Location = new System.Drawing.Point(39, 118);
+            this.lblDEs.Location = new System.Drawing.Point(71, 103);
             this.lblDEs.Name = "lblDEs";
-            this.lblDEs.Size = new System.Drawing.Size(26, 13);
+            this.lblDEs.Size = new System.Drawing.Size(25, 13);
             this.lblDEs.TabIndex = 2;
             this.lblDEs.Text = "Des";
             // 
             // txtDEs
             // 
-            this.txtDEs.Location = new System.Drawing.Point(95, 115);
+            this.txtDEs.Location = new System.Drawing.Point(127, 100);
             this.txtDEs.Name = "txtDEs";
             this.txtDEs.Size = new System.Drawing.Size(216, 20);
             this.txtDEs.TabIndex = 3;
@@ -184,7 +184,7 @@ namespace SmartPOS.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 211);
+            this.ClientSize = new System.Drawing.Size(454, 181);
             this.Controls.Add(this.txtDEs);
             this.Controls.Add(this.lblDEs);
             this.Controls.Add(this.toolStrip1);

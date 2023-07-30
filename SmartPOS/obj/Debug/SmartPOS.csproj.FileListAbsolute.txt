@@ -84,3 +84,5 @@ C:\Users\Sokar\source\repos\SmartPOS\SmartPOS\obj\Debug\SmartPOS.Forms.FormLogIn
 C:\Users\Sokar\source\repos\SmartPOS\SmartPOS\obj\Debug\SmartPOS.Forms.FormStartUp.resources
 C:\Users\Sokar\source\repos\SmartPOS\SmartPOS\obj\Debug\SmartPOS.Forms.FormPermissions.resources
 C:\Users\Sokar\source\repos\SmartPOS\SmartPOS\obj\Debug\SmartPOS.Forms.FilterForm.resources
+C:\Users\Sokar\source\repos\SmartPOS\SmartPOS\obj\Debug\SmartPOS.Forms.FormTables.resources
+C:\Users\Sokar\source\repos\SmartPOS\SmartPOS\obj\Debug\SmartPOS.Forms.FormTaxes.resources

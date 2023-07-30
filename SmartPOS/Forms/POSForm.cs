@@ -59,6 +59,7 @@ namespace SmartPOS.Forms
                 for (int i =0; i <= drs.Length - 1; i ++)
                 {
                     Button catBtn = new Button();
+                    catBtn.BackColor = Color.LightCyan;
                     catBtn.AccessibleName = "CAT";
                     catBtn.AccessibleDescription = drs[i]["Id"].ToString();
                     catBtn.Name = "btnCat" + drs[i]["Id"].ToString();
@@ -137,6 +138,7 @@ namespace SmartPOS.Forms
                 for (int i = 0; i <= drs.Length - 1; i++)
                 {
                     catBtn = new Button();
+                    catBtn.BackColor = Color.LightCyan;
                     catBtn.AccessibleName = "IT";
                     catBtn.AccessibleDescription = drs[i]["Id"].ToString();
                     catBtn.Name = "btnCat" + drs[i]["Id"].ToString();
@@ -186,6 +188,8 @@ namespace SmartPOS.Forms
             txtPayed.Clear();
             txtChange.Clear();
             txtItemQTY.Text = "0";
+            txtPayed.Text = "0";
+            txtChange.Text = "0";
             calCheck();
         }
 
@@ -222,7 +226,7 @@ namespace SmartPOS.Forms
             {
                 if (!txtItemQTY.Text.Contains("."))
                 {
-                    if (int.Parse(txtItemQTY.Text) == 0)
+                    if (double.Parse(txtItemQTY.Text) == 0)
                     {
                         button.Text = "0.";
                     }
@@ -234,7 +238,7 @@ namespace SmartPOS.Forms
             }
             else
             {
-                if (int.Parse(txtItemQTY.Text) == 0)
+                if (double.Parse(txtItemQTY.Text) == 0)
                 {
                     txtItemQTY.Text = button.Text;
                 }
@@ -377,16 +381,6 @@ namespace SmartPOS.Forms
             {
                 MessageBox.Show("Can't Print non paid check");
             }
-        }
-
-        private void txtTotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelOrder_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

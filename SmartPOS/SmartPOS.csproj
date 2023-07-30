@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -123,6 +124,18 @@
     </Compile>
     <Compile Include="Forms\FormStartUp.Designer.cs">
       <DependentUpon>FormStartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTables.Designer.cs">
+      <DependentUpon>FormTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTaxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTaxes.Designer.cs">
+      <DependentUpon>FormTaxes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormUsers.cs">
       <SubType>Form</SubType>
@@ -209,6 +222,12 @@
     <EmbeddedResource Include="Forms\FormStartUp.resx">
       <DependentUpon>FormStartUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTables.resx">
+      <DependentUpon>FormTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTaxes.resx">
+      <DependentUpon>FormTaxes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +259,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reports\rptCheck.rdlc" />
+    <EmbeddedResource Include="Reports\saleByItemReport.rdlc" />
     <EmbeddedResource Include="Reports\saleDetailsReport.rdlc" />
     <EmbeddedResource Include="Reports\saleReport.rdlc" />
     <None Include="packages.config" />

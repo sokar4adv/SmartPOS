@@ -32,26 +32,26 @@ namespace SmartPOS.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainOptions));
             this.btnExit = new System.Windows.Forms.Button();
             this.lblRestName = new System.Windows.Forms.Label();
-            this.txtRestName = new System.Windows.Forms.TextBox();
-            this.txtRestAddress1 = new System.Windows.Forms.TextBox();
             this.lblRestAddress1 = new System.Windows.Forms.Label();
-            this.txtRestAddress2 = new System.Windows.Forms.TextBox();
             this.lblRestAddress2 = new System.Windows.Forms.Label();
-            this.txtTelephone = new System.Windows.Forms.TextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
-            this.txtPrinterName = new System.Windows.Forms.TextBox();
             this.lblPrinterName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPic = new System.Windows.Forms.TextBox();
             this.lblPic = new System.Windows.Forms.Label();
             this.btnSelectPic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtreceiptline1 = new System.Windows.Forms.TextBox();
             this.lblReceiptline1 = new System.Windows.Forms.Label();
-            this.txtreceiptline2 = new System.Windows.Forms.TextBox();
             this.lblReceiptline2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtreceiptline2 = new System.Windows.Forms.TextBox();
+            this.txtreceiptline1 = new System.Windows.Forms.TextBox();
+            this.txtPic = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtPrinterName = new System.Windows.Forms.TextBox();
+            this.txtTelephone = new System.Windows.Forms.TextBox();
+            this.txtRestAddress2 = new System.Windows.Forms.TextBox();
+            this.txtRestAddress1 = new System.Windows.Forms.TextBox();
+            this.txtRestName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,22 +79,6 @@ namespace SmartPOS.Forms
             this.lblRestName.TabIndex = 3;
             this.lblRestName.Text = "Rest Name";
             // 
-            // txtRestName
-            // 
-            this.txtRestName.Location = new System.Drawing.Point(139, 13);
-            this.txtRestName.Name = "txtRestName";
-            this.txtRestName.Size = new System.Drawing.Size(173, 20);
-            this.txtRestName.TabIndex = 4;
-            this.txtRestName.TextChanged += new System.EventHandler(this.txtRestName_TextChanged);
-            // 
-            // txtRestAddress1
-            // 
-            this.txtRestAddress1.Location = new System.Drawing.Point(139, 39);
-            this.txtRestAddress1.Name = "txtRestAddress1";
-            this.txtRestAddress1.Size = new System.Drawing.Size(173, 20);
-            this.txtRestAddress1.TabIndex = 6;
-            this.txtRestAddress1.TextChanged += new System.EventHandler(this.txtRestAddress1_TextChanged);
-            // 
             // lblRestAddress1
             // 
             this.lblRestAddress1.AutoSize = true;
@@ -104,14 +88,6 @@ namespace SmartPOS.Forms
             this.lblRestAddress1.Size = new System.Drawing.Size(108, 16);
             this.lblRestAddress1.TabIndex = 5;
             this.lblRestAddress1.Text = "Rest Address 1";
-            // 
-            // txtRestAddress2
-            // 
-            this.txtRestAddress2.Location = new System.Drawing.Point(139, 65);
-            this.txtRestAddress2.Name = "txtRestAddress2";
-            this.txtRestAddress2.Size = new System.Drawing.Size(173, 20);
-            this.txtRestAddress2.TabIndex = 8;
-            this.txtRestAddress2.TextChanged += new System.EventHandler(this.txtRestAddress2_TextChanged);
             // 
             // lblRestAddress2
             // 
@@ -123,14 +99,6 @@ namespace SmartPOS.Forms
             this.lblRestAddress2.TabIndex = 7;
             this.lblRestAddress2.Text = "Rest Address 2";
             // 
-            // txtTelephone
-            // 
-            this.txtTelephone.Location = new System.Drawing.Point(139, 91);
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(173, 20);
-            this.txtTelephone.TabIndex = 10;
-            this.txtTelephone.TextChanged += new System.EventHandler(this.txtTelephone_TextChanged);
-            // 
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
@@ -141,14 +109,6 @@ namespace SmartPOS.Forms
             this.lblTelephone.TabIndex = 9;
             this.lblTelephone.Text = "Phone";
             // 
-            // txtPrinterName
-            // 
-            this.txtPrinterName.Location = new System.Drawing.Point(139, 117);
-            this.txtPrinterName.Name = "txtPrinterName";
-            this.txtPrinterName.Size = new System.Drawing.Size(173, 20);
-            this.txtPrinterName.TabIndex = 12;
-            this.txtPrinterName.TextChanged += new System.EventHandler(this.txtPrinterName_TextChanged);
-            // 
             // lblPrinterName
             // 
             this.lblPrinterName.AutoSize = true;
@@ -158,23 +118,6 @@ namespace SmartPOS.Forms
             this.lblPrinterName.Size = new System.Drawing.Size(53, 16);
             this.lblPrinterName.TabIndex = 11;
             this.lblPrinterName.Text = "Printer";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(139, 232);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 121);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtPic
-            // 
-            this.txtPic.Location = new System.Drawing.Point(139, 359);
-            this.txtPic.Name = "txtPic";
-            this.txtPic.Size = new System.Drawing.Size(173, 20);
-            this.txtPic.TabIndex = 17;
-            this.txtPic.TextChanged += new System.EventHandler(this.txtlogo_TextChanged);
             // 
             // lblPic
             // 
@@ -189,7 +132,7 @@ namespace SmartPOS.Forms
             // btnSelectPic
             // 
             this.btnSelectPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectPic.Location = new System.Drawing.Point(83, 360);
+            this.btnSelectPic.Location = new System.Drawing.Point(91, 358);
             this.btnSelectPic.Name = "btnSelectPic";
             this.btnSelectPic.Size = new System.Drawing.Size(50, 19);
             this.btnSelectPic.TabIndex = 18;
@@ -211,15 +154,6 @@ namespace SmartPOS.Forms
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtreceiptline1
-            // 
-            this.txtreceiptline1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreceiptline1.Location = new System.Drawing.Point(139, 143);
-            this.txtreceiptline1.Name = "txtreceiptline1";
-            this.txtreceiptline1.Size = new System.Drawing.Size(173, 22);
-            this.txtreceiptline1.TabIndex = 21;
-            this.txtreceiptline1.TextChanged += new System.EventHandler(this.txtReceiptline1_TextChanged);
-            // 
             // lblReceiptline1
             // 
             this.lblReceiptline1.AutoSize = true;
@@ -229,15 +163,6 @@ namespace SmartPOS.Forms
             this.lblReceiptline1.Size = new System.Drawing.Size(95, 16);
             this.lblReceiptline1.TabIndex = 20;
             this.lblReceiptline1.Text = "Receipt line 1";
-            // 
-            // txtreceiptline2
-            // 
-            this.txtreceiptline2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreceiptline2.Location = new System.Drawing.Point(139, 169);
-            this.txtreceiptline2.Name = "txtreceiptline2";
-            this.txtreceiptline2.Size = new System.Drawing.Size(173, 22);
-            this.txtreceiptline2.TabIndex = 23;
-            this.txtreceiptline2.TextChanged += new System.EventHandler(this.txtReceiptline2_TextChanged);
             // 
             // lblReceiptline2
             // 
@@ -249,16 +174,6 @@ namespace SmartPOS.Forms
             this.lblReceiptline2.TabIndex = 22;
             this.lblReceiptline2.Text = "Receipt line 2";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(139, 195);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 21);
-            this.comboBox1.TabIndex = 25;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -269,6 +184,82 @@ namespace SmartPOS.Forms
             this.label2.TabIndex = 24;
             this.label2.Text = "Category";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(147, 196);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(173, 21);
+            this.comboBox1.TabIndex = 33;
+            // 
+            // txtreceiptline2
+            // 
+            this.txtreceiptline2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreceiptline2.Location = new System.Drawing.Point(147, 168);
+            this.txtreceiptline2.Name = "txtreceiptline2";
+            this.txtreceiptline2.Size = new System.Drawing.Size(173, 22);
+            this.txtreceiptline2.TabIndex = 32;
+            // 
+            // txtreceiptline1
+            // 
+            this.txtreceiptline1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreceiptline1.Location = new System.Drawing.Point(147, 142);
+            this.txtreceiptline1.Name = "txtreceiptline1";
+            this.txtreceiptline1.Size = new System.Drawing.Size(173, 22);
+            this.txtreceiptline1.TabIndex = 31;
+            // 
+            // txtPic
+            // 
+            this.txtPic.Location = new System.Drawing.Point(147, 358);
+            this.txtPic.Name = "txtPic";
+            this.txtPic.Size = new System.Drawing.Size(173, 20);
+            this.txtPic.TabIndex = 34;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(147, 231);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 121);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtPrinterName
+            // 
+            this.txtPrinterName.Location = new System.Drawing.Point(147, 116);
+            this.txtPrinterName.Name = "txtPrinterName";
+            this.txtPrinterName.Size = new System.Drawing.Size(173, 20);
+            this.txtPrinterName.TabIndex = 30;
+            // 
+            // txtTelephone
+            // 
+            this.txtTelephone.Location = new System.Drawing.Point(147, 90);
+            this.txtTelephone.Name = "txtTelephone";
+            this.txtTelephone.Size = new System.Drawing.Size(173, 20);
+            this.txtTelephone.TabIndex = 29;
+            // 
+            // txtRestAddress2
+            // 
+            this.txtRestAddress2.Location = new System.Drawing.Point(147, 64);
+            this.txtRestAddress2.Name = "txtRestAddress2";
+            this.txtRestAddress2.Size = new System.Drawing.Size(173, 20);
+            this.txtRestAddress2.TabIndex = 28;
+            // 
+            // txtRestAddress1
+            // 
+            this.txtRestAddress1.Location = new System.Drawing.Point(147, 38);
+            this.txtRestAddress1.Name = "txtRestAddress1";
+            this.txtRestAddress1.Size = new System.Drawing.Size(173, 20);
+            this.txtRestAddress1.TabIndex = 27;
+            // 
+            // txtRestName
+            // 
+            this.txtRestName.Location = new System.Drawing.Point(147, 12);
+            this.txtRestName.Name = "txtRestName";
+            this.txtRestName.Size = new System.Drawing.Size(173, 20);
+            this.txtRestName.TabIndex = 26;
+            // 
             // MainOptions
             // 
             this.AccessibleDescription = "";
@@ -277,25 +268,25 @@ namespace SmartPOS.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 391);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtreceiptline2);
-            this.Controls.Add(this.lblReceiptline2);
             this.Controls.Add(this.txtreceiptline1);
+            this.Controls.Add(this.txtPic);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtPrinterName);
+            this.Controls.Add(this.txtTelephone);
+            this.Controls.Add(this.txtRestAddress2);
+            this.Controls.Add(this.txtRestAddress1);
+            this.Controls.Add(this.txtRestName);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblReceiptline2);
             this.Controls.Add(this.lblReceiptline1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnSelectPic);
-            this.Controls.Add(this.txtPic);
             this.Controls.Add(this.lblPic);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtPrinterName);
             this.Controls.Add(this.lblPrinterName);
-            this.Controls.Add(this.txtTelephone);
             this.Controls.Add(this.lblTelephone);
-            this.Controls.Add(this.txtRestAddress2);
             this.Controls.Add(this.lblRestAddress2);
-            this.Controls.Add(this.txtRestAddress1);
             this.Controls.Add(this.lblRestAddress1);
-            this.Controls.Add(this.txtRestName);
             this.Controls.Add(this.lblRestName);
             this.Controls.Add(this.btnExit);
             this.Name = "MainOptions";
@@ -311,25 +302,25 @@ namespace SmartPOS.Forms
 
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblRestName;
-        private System.Windows.Forms.TextBox txtRestName;
-        private System.Windows.Forms.TextBox txtRestAddress1;
         private System.Windows.Forms.Label lblRestAddress1;
-        private System.Windows.Forms.TextBox txtRestAddress2;
         private System.Windows.Forms.Label lblRestAddress2;
-        private System.Windows.Forms.TextBox txtTelephone;
         private System.Windows.Forms.Label lblTelephone;
-        private System.Windows.Forms.TextBox txtPrinterName;
         private System.Windows.Forms.Label lblPrinterName;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtPic;
         private System.Windows.Forms.Label lblPic;
         private System.Windows.Forms.Button btnSelectPic;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtreceiptline1;
         private System.Windows.Forms.Label lblReceiptline1;
-        private System.Windows.Forms.TextBox txtreceiptline2;
         private System.Windows.Forms.Label lblReceiptline2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtreceiptline2;
+        private System.Windows.Forms.TextBox txtreceiptline1;
+        private System.Windows.Forms.TextBox txtPic;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtPrinterName;
+        private System.Windows.Forms.TextBox txtTelephone;
+        private System.Windows.Forms.TextBox txtRestAddress2;
+        private System.Windows.Forms.TextBox txtRestAddress1;
+        private System.Windows.Forms.TextBox txtRestName;
     }
 }

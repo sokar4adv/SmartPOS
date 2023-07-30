@@ -31,7 +31,7 @@ namespace SmartPOS.Classes
         {
             Byte[] myImg = (Byte[])bObj;
             Image image = null;
-            using(MemoryStream ms = new MemoryStream(myImg, 0,myImg.Length))
+            using(MemoryStream ms = new MemoryStream(myImg, 0, myImg.Length))
             {
                 ms.Write(myImg, 0, myImg.Length);
                 image = Image.FromStream(ms, true);
